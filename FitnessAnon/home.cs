@@ -23,7 +23,7 @@ namespace FitnessAnon
             SharedPrefManager sp = new SharedPrefManager(this);
             SetContentView(Resource.Layout.Home);
             TextView textView = (TextView)FindViewById(Resource.Id.textView1);
-            //textView.Append(" " + sp.GetString("firstname", null).Replace("\"",""));
+            textView.Append(" " + SharedPrefManager.getInstance(Application.Context).FirstName);
             Button weightBmi = (Button)FindViewById(Resource.Id.weight_bmi);
             weightBmi.Click += WeightBmi_Click;
             Button waterIntake = (Button)FindViewById(Resource.Id.water_intake);

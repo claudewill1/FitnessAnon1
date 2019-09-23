@@ -75,7 +75,7 @@ namespace FitnessAnon
 
 
                 WebClient webClient = new WebClient();
-                Uri uri = new Uri("http://72.198.243.77:8080/Android/FitnessAppv1/userLogin.php");
+                Uri uri = new Uri("http://72.198.242.232:8080/Android/FitnessAppv1/userLogin.php");
 
                 NameValueCollection parmeters = new NameValueCollection();
 
@@ -153,7 +153,7 @@ namespace FitnessAnon
             }
             catch (Exception ex)
             {
-                Toast.MakeText(this, "Error", ToastLength.Long).Show();
+                Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
             }
         }
 

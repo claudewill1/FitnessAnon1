@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,20 +12,20 @@
         android:text="Daily Water Intake (8oz/glass of water)"/>
     <ImageView
         android:src="@drawable/water_glass"
-        android:layout_width="500"
-        android:layout_height="250"
+        android:layout_width="500dp"
+        android:layout_height="250dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30"/> 
+        android:layout_marginTop="30dp"/> 
     <TextView
         android:id="@+id/txtGlassOfWater"
-        android:layout_width="100"
-        android:layout_height="50"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         
         android:background="@android:drawable/editbox_background"/>
     <LinearLayout
         android:id="@+id/LinearLayout1"
-        android:layout_width="140"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
         <Button
@@ -33,14 +33,14 @@
         android:text="-"
         android:textSize="50sp"
         android:textAlignment="center"
-        android:layout_width="70"
-        android:layout_height="70"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_alignParentRight="true"/>
         <Button
             android:id="@+id/btnIncrease"
             android:text="+"
             android:textSize="50sp"
-            android:layout_width="70"
-            android:layout_height="70"/>
+            android:layout_width="70dp"
+            android:layout_height="70dp"/>
     </LinearLayout>
 </LinearLayout>

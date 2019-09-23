@@ -67,7 +67,7 @@ namespace FitnessAnon
             }
             catch(Exception e)
             {
-                Toast.MakeText(this, "Error", ToastLength.Long).Show();
+                Toast.MakeText(this, e.Message, ToastLength.Long).Show();
             }
         }
 

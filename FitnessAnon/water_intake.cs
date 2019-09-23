@@ -19,7 +19,7 @@ namespace FitnessAnon
         {
             base.OnCreate(savedInstanceState);
             //set view to water_intake.xml
-            
+            SetContentView(Resource.Layout.WaterIntake);
 
             // Create your application here
         }
