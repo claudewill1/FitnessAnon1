@@ -26,6 +26,8 @@ namespace FitnessApp
         private const string KEY_FIRSTNAME = "firstName";
         private const string KEY_LASTNAME = "lastName";
         private const string KEY_AGE = "age";
+        private const string KEY_DATE = "date";
+        private const string KEY_WATERINTAKE = "waterIntake";
 
 
 
@@ -135,6 +137,30 @@ namespace FitnessApp
             }
         }
 
+        public virtual double GetWaterIntake(DateTime date)
+        {
+            ISharedPreferences sp = mCtx.GetSharedPreferences(SHARED_PREF_NAME, FileCreationMode.Private);
+            if (date.Date.ToString() == sp.GetString(KEY_DATE, null))
+            {
+                return Convert.ToDouble(sp.GetString(KEY_WATERINTAKE, "0.0"));
+            }
+            else
+            {
+                return 0.0;
+            }
+        }
+
+        public virtual bool SetWaterIntake(double waterIntake, DateTime date)
+        {
+            ISharedPreferences sp = mCtx.GetSharedPreferences(SHARED_PREF_NAME, FileCreationMode.Private);
+            ISharedPreferencesEditor editor = sp.Edit();
+
+            editor.PutString(KEY_DATE, date.Date.ToString());
+            editor.PutString(KEY_WATERINTAKE, waterIntake.ToString());
+            editor.Apply();
+
+            return true;
+        }
        
 
 
