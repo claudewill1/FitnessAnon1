@@ -33,11 +33,24 @@ namespace FitnessAnon
             lblBMI = (TextView)FindViewById(Resource.Id.lblBMI);
             Button submitBtn = (Button)FindViewById(Resource.Id.Submit);
             submitBtn.Click += SubmitBtn_Click;
+            Button btnHome = (Button)FindViewById(Resource.Id.btnHome);
+            btnHome.Click += BtnHome_Click;
             
 
             
         }
-
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Intent home = new Intent(this, typeof(home));
+                this.StartActivity(home);
+            }
+            catch (Exception ex)
+            {
+                Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
+            }
+        }
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
             double bmi;

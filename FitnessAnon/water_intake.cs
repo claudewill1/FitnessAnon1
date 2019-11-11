@@ -30,6 +30,21 @@ namespace FitnessAnon
             //increase water intake
             Button btnIncreaseIntake = (Button)FindViewById(Resource.Id.btnIncrease);
             btnIncreaseIntake.Click += BtnIncreaseIntake_Click;
+            //Button to take user back to home
+            Button btnHome = (Button)FindViewById(Resource.Id.btn_home);
+            btnHome.Click += BtnHome_Click;
+        }
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Intent home = new Intent(this, typeof(home));
+                this.StartActivity(home);
+            }
+            catch (Exception ex)
+            {
+                Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
+            }
         }
         private void BtnDecreaseIntake_Click(object sender,EventArgs e)
         {
